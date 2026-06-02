@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linden's Photography</title>
+</head>
+<body>
+
+<h1>Linden's Photography</h1>
+
+<img src="images/imperialhotel.jpg" width="800">
+
+<p>Newtown, Sydney, 2026</p>
+
+</body>
+</html>
