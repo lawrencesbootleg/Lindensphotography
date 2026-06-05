@@ -31,6 +31,7 @@
   }
 
   .content {
+    animation: fadeIn 1.2s ease;
     max-width: 620px;
     margin: 55px auto 90px auto;
     padding: 0 24px;
@@ -132,6 +133,26 @@
   .footnotes a:hover {
     color: white;
   }
+
+  @keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(8px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
 
   @media (max-width: 600px) {
     .content {
