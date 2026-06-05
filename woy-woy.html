@@ -4,7 +4,7 @@
 <head>
   <title>Woy Woy | Linden Li</title>
 
-<style>
+  <style>
     body {
       background: #111;
       color: white;
@@ -48,23 +48,37 @@
       gap: 18px;
     }
 
-    .gallery a {
-      display: block;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      background: #222;
-    }
-
     .gallery img {
       width: 100%;
-      height: 100%;
+      aspect-ratio: 1 / 1;
+      height: auto;
       object-fit: cover;
       display: block;
+      cursor: pointer;
       transition: opacity 0.25s ease;
     }
 
     .gallery img:hover {
       opacity: 0.82;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .lightbox img {
+      max-width: 92vw;
+      max-height: 92vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
     }
 
     @media (max-width: 800px) {
@@ -93,91 +107,8 @@
         gap: 12px;
       }
     }
-  /* LIGHTBOX */
-
-  .lightbox {
-
-    display: none;
-
-    position: fixed;
-
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.95);
-
-    z-index: 9999;
-
-    justify-content: center;
-
-    align-items: center;
-
-    cursor: pointer;
-
-  }
-
-  .lightbox img {
-
-    max-width: 92vw;
-
-    max-height: 92vh;
-
-    width: auto;
-
-    height: auto;
-
-    object-fit: contain;
-
-  }
-
-  @media (max-width: 800px) {
-
-    .gallery {
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 14px;
-
-    }
-
-  }
-
-  @media (max-width: 600px) {
-
-    nav {
-
-      font-size: 0.72rem;
-
-    }
-
-    nav a {
-
-      margin: 0 7px;
-
-    }
-
-    h1 {
-
-      font-size: 1.8rem;
-
-      margin: 34px 0 42px 0;
-
-    }
-
-    .gallery {
-
-      padding: 0 14px;
-
-      gap: 12px;
-
-    }
-
-  }
   </style>
-  
 </head>
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-image" src="" alt="">
-</div>
 
 <body>
 
