@@ -292,6 +292,12 @@
 
     if (currentLine < lines.length) {
       lines[currentLine].classList.add("show");
+
+      lines[currentLine].scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
       currentLine++;
     }
 
