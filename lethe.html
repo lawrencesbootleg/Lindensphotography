@@ -244,11 +244,15 @@
 
 <script>
   let currentLine = 0;
+  let isRevealing = false;
 
   const lines = document.querySelectorAll(".line");
   const publicationNote = document.getElementById("publication-note");
 
   function showNextLine() {
+    if (isRevealing) return;
+    isRevealing = true;
+
     if (currentLine < lines.length) {
       lines[currentLine].classList.add("show");
 
@@ -263,13 +267,14 @@
     if (currentLine === lines.length && publicationNote) {
       publicationNote.classList.add("show");
     }
+
+    setTimeout(function() {
+      isRevealing = false;
+    }, 500);
   }
 
   document.addEventListener("click", function(event) {
-    if (event.target.closest("nav")) {
-      return;
-    }
-
+    if (event.target.closest("nav")) return;
     showNextLine();
   });
 
