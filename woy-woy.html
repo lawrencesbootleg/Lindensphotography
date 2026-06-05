@@ -4,96 +4,118 @@
 <head>
   <title>Woy Woy | Linden Li</title>
 
-  <style>
-    body {
-      background: #111;
-      color: white;
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-    }
+<style>
+  body {
+    background: #111;
+    color: white;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+  }
 
+  nav {
+    text-align: center;
+    margin: 18px 0 30px 0;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 14px;
+  }
+
+  nav a:hover {
+    color: white;
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 2.2rem;
+    margin: 45px 0 60px 0;
+    letter-spacing: 0.04em;
+  }
+
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto 90px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .gallery a {
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #222;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.25s ease;
+  }
+
+  .gallery img:hover {
+    opacity: 0.82;
+  }
+
+  /* LIGHTBOX */
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .lightbox img {
+    max-width: 92vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 800px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+  }
+
+  @media (max-width: 600px) {
     nav {
-      text-align: center;
-      margin: 18px 0 30px 0;
-      font-family: Arial, sans-serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-size: 0.72rem;
     }
 
     nav a {
-      color: #aaa;
-      text-decoration: none;
-      margin: 0 14px;
-    }
-
-    nav a:hover {
-      color: white;
+      margin: 0 7px;
     }
 
     h1 {
-      text-align: center;
-      font-weight: normal;
-      font-size: 2.2rem;
-      margin: 45px 0 60px 0;
-      letter-spacing: 0.04em;
+      font-size: 1.8rem;
+      margin: 34px 0 42px 0;
     }
 
     .gallery {
-      max-width: 1200px;
-      margin: 0 auto 90px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      padding: 0 14px;
+      gap: 12px;
     }
-
-    .gallery a {
-      display: block;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      background: #222;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: opacity 0.25s ease;
-    }
-
-    .gallery img:hover {
-      opacity: 0.82;
-    }
-
-    @media (max-width: 800px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        font-size: 0.72rem;
-      }
-
-      nav a {
-        margin: 0 7px;
-      }
-
-      h1 {
-        font-size: 1.8rem;
-        margin: 34px 0 42px 0;
-      }
-
-      .gallery {
-        padding: 0 14px;
-        gap: 12px;
-      }
-    }
-  </style>
+  }
+</style>
+  
 </head>
 
 <body>
@@ -109,39 +131,38 @@
 
 <div class="gallery">
 
-  <a href="images/birding/woywoy_cover.JPG" target="_blank">
-    <img src="images/birding/woywoy_cover.JPG" alt="Pelicans at Woy Woy">
-  </a>
-
-  <a href="images/birding/woywoy_01.jpg" target="_blank">
-    <img src="images/birding/woywoy_01.jpg" alt="Pelicans at Woy Woy">
-  </a>
-
-  <a href="images/birding/woywoy_02.jpg" target="_blank">
-    <img src="images/birding/woywoy_02.jpg" alt="Pelicans at Woy Woy">
-  </a>
-
-  <a href="images/birding/woywoy_03.jpg" target="_blank">
-    <img src="images/birding/woywoy_03.jpg" alt="Pelican reflection at Woy Woy">
-  </a>
-
-  <a href="images/birding/woywoy_08.jpg" target="_blank">
-    <img src="images/birding/woywoy_08.jpg" alt="Side profile pelican at Woy Woy">
-  </a>
-
-  <a href="images/birding/woywoy_06.JPG" target="_blank">
-    <img src="images/birding/woywoy_06.JPG" alt="Pelican on water at Woy Woy">
-  </a>
-
-  <a href="images/birding/woywoy_05.jpg" target="_blank">
-    <img src="images/birding/woywoy_05.jpg" alt="Pelicans at Woy Woy">
-  </a>
-
-  <a href="images/birding/woywoy_04.jpg" target="_blank">
-    <img src="images/birding/woywoy_04.jpg" alt="Pelicans at Woy Woy">
-  </a>
+  <img src="images/birding/woywoy_cover.JPG" alt="Pelicans at Woy Woy" onclick="openLightbox(this.src)">
+  <img src="images/birding/woywoy_01.jpg" alt="Pelicans at Woy Woy" onclick="openLightbox(this.src)">
+  <img src="images/birding/woywoy_02.jpg" alt="Pelicans at Woy Woy" onclick="openLightbox(this.src)">
+  <img src="images/birding/woywoy_03.jpg" alt="Pelican reflection at Woy Woy" onclick="openLightbox(this.src)">
+  <img src="images/birding/woywoy_08.jpg" alt="Side profile pelican at Woy Woy" onclick="openLightbox(this.src)">
+  <img src="images/birding/woywoy_06.JPG" alt="Pelican on water at Woy Woy" onclick="openLightbox(this.src)">
+  <img src="images/birding/woywoy_05.jpg" alt="Pelicans at Woy Woy" onclick="openLightbox(this.src)">
+  <img src="images/birding/woywoy_04.jpg" alt="Pelicans at Woy Woy" onclick="openLightbox(this.src)">
+  <img src="images/birding/woywoy_09.jpg" alt="Two Pelicans" onclick="openLightbox(this.src)">
 
 </div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<script>
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeLightbox();
+  }
+});
+</script>
 
 </body>
 </html>
