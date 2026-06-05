@@ -40,6 +40,7 @@
     }
 
     .gallery {
+      animation: fadeIn 0.8s ease;
       max-width: 1200px;
       margin: 0 auto 90px auto;
       padding: 0 20px;
@@ -61,25 +62,30 @@
     .gallery img:hover {
       opacity: 0.82;
     }
+    
+   
+.lightbox {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.95);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
+  opacity: 0;
+  visibility: hidden;
 
-    .lightbox img {
-      max-width: 92vw;
-      max-height: 92vh;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-    }
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.lightbox.show {
+  opacity: 1;
+  visibility: visible;
+}
 
     @media (max-width: 800px) {
       .gallery {
@@ -142,18 +148,12 @@
 <script>
 function openLightbox(src) {
   document.getElementById('lightbox-img').src = src;
-  document.getElementById('lightbox').style.display = 'flex';
+  document.getElementById('lightbox').classList.add('show');
 }
 
 function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
+  document.getElementById('lightbox').classList.remove('show');
 }
-
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeLightbox();
-  }
-});
 </script>
 
 </body>
