@@ -33,7 +33,7 @@
 
     .logo {
       text-align: center;
-      margin: 18px 0 28px 0;
+      margin: 18px 0 34px 0;
     }
 
     .logo img {
@@ -46,32 +46,15 @@
     }
 
     .content {
-      max-width: 900px;
-      margin: 55px auto 90px auto;
+      max-width: 1000px;
+      margin: 0 auto 90px auto;
       padding: 0 24px;
     }
 
-    h1 {
-      font-weight: normal;
-      font-size: 2.3rem;
-      margin-bottom: 18px;
-      color: white;
-    }
-
-    .description {
-      color: #888;
-      margin-bottom: 50px;
-      line-height: 1.7;
-      max-width: 620px;
-    }
-
     .cover-link {
-      position: relative;
       display: block;
-      overflow: hidden;
       text-decoration: none;
       color: white;
-      margin-top: 35px;
     }
 
     .cover-link img {
@@ -79,36 +62,42 @@
       height: 360px;
       object-fit: cover;
       display: block;
-      opacity: 0.78;
-    }
-
-    .cover-link span {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.4rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+      opacity: 0.86;
+      transition: opacity 0.3s ease;
     }
 
     .cover-link:hover img {
-      opacity: 0.95;
+      opacity: 1;
+    }
+
+    .cover-title {
+      font-weight: normal;
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      margin: 18px 0 0 0;
+      color: #e8e8e8;
     }
 
     @media (max-width: 600px) {
+      nav {
+        font-size: 0.72rem;
+      }
+
       nav a {
-        margin: 0 8px;
+        margin: 0 7px;
+      }
+
+      .logo {
+        margin: 18px 0 28px 0;
       }
 
       .cover-link img {
         height: 240px;
       }
 
-      .cover-link span {
-        font-size: 1.7rem;
+      .cover-title {
+        font-size: 1.35rem;
+        margin-top: 14px;
       }
     }
   </style>
@@ -127,12 +116,11 @@
   <img src="images/linden-li-logo.png" alt="Linden Li">
 </div>
 
- <a class="cover-link" href="woy-woy.html">
+<div class="content">
 
+  <a class="cover-link" href="woy-woy.html">
     <img src="images/birding/woywoy_cover.jpg" alt="Woy Woy">
-
-    <span>Woy Woy</span>
-
+    <h1 class="cover-title">Woy Woy</h1>
   </a>
 
 </div>
