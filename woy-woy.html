@@ -39,27 +39,19 @@
       letter-spacing: 0.04em;
     }
 
-    .gallery {
-      max-width: 1200px;
-      margin: 0 auto 90px auto;
-      padding: 0 20px;
-      columns: 3;
-      column-gap: 18px;
-    }
+   .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
 
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 18px;
-      break-inside: avoid;
-      cursor: pointer;
-      transition: opacity 0.25s ease;
-    }
+.gallery a {
+  aspect-ratio: 1 / 1;
+}
 
-    .gallery img:hover {
-      opacity: 0.82;
-    }
+.gallery img {
+  object-fit: cover;
+}
 
     .lightbox {
       display: none;
