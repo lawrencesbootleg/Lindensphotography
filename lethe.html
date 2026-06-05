@@ -33,7 +33,7 @@
     }
 
     .content {
-      max-width: 900px;
+      max-width: 820px;
       margin: 70px auto 90px auto;
       padding: 0 24px;
     }
@@ -61,32 +61,32 @@
       cursor: pointer;
     }
 
-   .line {
-  opacity: 0;
-  transition: opacity 1.4s ease;
-  margin-bottom: 1.2em;
-  max-width: 680px;
-}
-
-.line.show {
-  opacity: 1;
-}
-
-    .left {
-      margin-left: 0;
+    .line {
+      opacity: 0;
+      transition: opacity 1.4s ease;
+      margin-bottom: 1.05em;
+      max-width: 680px;
     }
 
-    .middle {
-      margin-left: 18%;
+    .line.show {
+      opacity: 1;
+    }
+
+    .pause {
+      margin-top: 3.8em;
+    }
+
+    .indent {
+      margin-left: 12%;
+    }
+
+    .deep-indent {
+      margin-left: 24%;
     }
 
     .right {
       margin-left: auto;
       text-align: right;
-    }
-
-    .space {
-      margin-top: 4em;
     }
 
     .publication-note {
@@ -152,7 +152,8 @@
         line-height: 1.8;
       }
 
-      .middle,
+      .indent,
+      .deep-indent,
       .right {
         margin-left: 0;
         text-align: left;
@@ -178,50 +179,88 @@
     click / tap to continue
   </div>
 
-  <div class="poem" onclick="showNextLine()">
+  <div class="poem">
 
-    <div class="line left">Boarding this one-way train, where will tomorrow be?</div>
-    <div class="line middle">No one bid farewell, yet our memories linger.</div>
-    <div class="line right">At midnight, the Milky Way gazes at the Earth;</div>
-    <div class="line left">You appear as a seagull in my dreams.</div>
-    <div class="line middle">Those thoughts don’t belong under this piece of sky.</div>
-    <div class="line right">Moments of joy are fleeting, while feelings of loss are perpetuated.</div>
-    <div class="line left">I folded my silence into the suitcase,</div>
+    <div class="line">Boarding this one-way train,</div>
+    <div class="line indent">where will tomorrow be?</div>
 
-    <div class="line middle space">Falling into the cracks of the next city with friends’ well-wishes in tow.</div>
+    <div class="line pause">No one bid farewell,</div>
+    <div class="line indent">yet our memories linger.</div>
 
-    <div class="line left space">Twenty-eight inches of silence, as if you could ever really forget.</div>
-    <div class="line middle">After six thousand tries saying goodbye, I found the courage to not look back.</div>
-    <div class="line right">No wet springs here, nor red silk cotton trees.</div>
-    <div class="line left">Through the city’s harbour to the coastline I tread,</div>
-    <div class="line middle">The hailstorm of seagulls strikes my heart.</div>
-    <div class="line right">Allow me to unveil new friends and life’s allure;</div>
-    <div class="line left">A burning eucalyptus, a magpie that cannot fly,</div>
-    <div class="line middle">A group of cicadas in golden silence, a sea in wild spree,</div>
-    <div class="line right">Red as a sun unwilling to set,</div>
-    <div class="line left">Blue as a stringless kite wandering across the sky.</div>
-    <div class="line middle">Yet I am the pest of July,</div>
-    <div class="line right">Hollowing out time with my eroded will.</div>
-    <div class="line left">Ambiguous messages come from beyond;</div>
-    <div class="line middle">Old news leaves behind grazes that bleed.</div>
-    <div class="line right">Beneath a clear sunset, seagulls circle,</div>
-    <div class="line left">Yet the departed no longer speak.</div>
-    <div class="line middle">Nestling my ears upon the crack of a seashell,</div>
-    <div class="line right">I hear flowers falling from the trees.</div>
-    <div class="line left">A scrap of blue sky can’t patch poisoned air.</div>
-    <div class="line middle">The crowd persists like ants.</div>
+    <div class="line pause">At midnight,</div>
+    <div class="line indent">the Milky Way gazes at the Earth;</div>
+    <div class="line">You appear as a seagull in my dreams.</div>
 
-    <div class="line right space">I fall back from winter’s grasp</div>
+    <div class="line pause">Those thoughts don’t belong</div>
+    <div class="line indent">under this piece of sky.</div>
+
+    <div class="line pause">Moments of joy are fleeting,</div>
+    <div class="line indent">while feelings of loss are perpetuated.</div>
+
+    <div class="line pause">I folded my silence into the suitcase,</div>
+    <div class="line deep-indent">falling into the cracks of the next city</div>
+    <div class="line indent">with friends’ well-wishes in tow.</div>
+
+    <div class="line pause">Twenty-eight inches of silence,</div>
+    <div class="line indent">as if you could ever really forget.</div>
+
+    <div class="line pause">After six thousand tries saying goodbye,</div>
+    <div class="line indent">I found the courage to not look back.</div>
+
+    <div class="line pause">No wet springs here,</div>
+    <div class="line indent">nor red silk cotton trees.</div>
+
+    <div class="line pause">Through the city’s harbour</div>
+    <div class="line indent">to the coastline I tread,</div>
+    <div class="line">The hailstorm of seagulls strikes my heart.</div>
+
+    <div class="line pause">Allow me to unveil new friends</div>
+    <div class="line indent">and life’s allure;</div>
+
+    <div class="line pause">A burning eucalyptus,</div>
+    <div class="line indent">a magpie that cannot fly,</div>
+    <div class="line">A group of cicadas in golden silence,</div>
+    <div class="line indent">a sea in wild spree,</div>
+
+    <div class="line pause">Red as a sun unwilling to set,</div>
+    <div class="line indent">Blue as a stringless kite wandering across the sky.</div>
+
+    <div class="line pause">Yet I am the pest of July,</div>
+    <div class="line indent">hollowing out time with my eroded will.</div>
+
+    <div class="line pause">Ambiguous messages come from beyond;</div>
+    <div class="line indent">Old news leaves behind grazes that bleed.</div>
+
+    <div class="line pause">Beneath a clear sunset,</div>
+    <div class="line indent">seagulls circle,</div>
+    <div class="line">Yet the departed no longer speak.</div>
+
+    <div class="line pause">Nestling my ears</div>
+    <div class="line indent">upon the crack of a seashell,</div>
+    <div class="line">I hear flowers falling from the trees.</div>
+
+    <div class="line pause">A scrap of blue sky</div>
+    <div class="line indent">can’t patch poisoned air.</div>
+    <div class="line">The crowd persists like ants.</div>
+
+    <div class="line pause right">I fall back from winter’s grasp</div>
     <div class="line right">Into the season where plum rain pitter-patters.</div>
     <div class="line right">Farewell, plump clouds of the city.</div>
-    <div class="line right">Beneath a clear sunset, seagulls circle,</div>
+
+    <div class="line pause right">Beneath a clear sunset,</div>
+    <div class="line right">seagulls circle,</div>
     <div class="line right">Even the living shall forget.</div>
-    <div class="line right">Tomorrow is an unfathomable secret,</div>
+
+    <div class="line pause right">Tomorrow is an unfathomable secret,</div>
     <div class="line right">Just like an announcer emerging from backstage.</div>
-    <div class="line right">This is a world where it is better to forsake the light,</div>
-    <div class="line right">Embrace the night, stand by,</div>
+
+    <div class="line pause right">This is a world where it is better to forsake the light,</div>
+    <div class="line right">Embrace the night,</div>
+    <div class="line right">stand by,</div>
     <div class="line right">And follow the contrails left by flights.</div>
-    <div class="line right">As the question mark is about to turn into something else,</div>
+
+    <div class="line pause right">As the question mark</div>
+    <div class="line right">is about to turn into something else,</div>
     <div class="line right">I yearn to net the Pacific winds for you</div>
     <div class="line right">On the last typhoon day.</div>
 
@@ -253,12 +292,6 @@
 
     if (currentLine < lines.length) {
       lines[currentLine].classList.add("show");
-
-      lines[currentLine].scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
-
       currentLine++;
     }
 
@@ -268,7 +301,7 @@
 
     setTimeout(function() {
       isRevealing = false;
-    }, 500);
+    }, 450);
   }
 
   document.addEventListener("click", function(event) {
