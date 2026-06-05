@@ -244,23 +244,41 @@
 
 <script>
   let currentLine = 0;
+
   const lines = document.querySelectorAll(".line");
   const publicationNote = document.getElementById("publication-note");
 
   function showNextLine() {
     if (currentLine < lines.length) {
       lines[currentLine].classList.add("show");
+
       lines[currentLine].scrollIntoView({
         behavior: "smooth",
         block: "center"
       });
+
       currentLine++;
     }
 
-    if (currentLine === lines.length) {
+    if (currentLine === lines.length && publicationNote) {
       publicationNote.classList.add("show");
     }
   }
+
+  document.addEventListener("click", function(event) {
+    if (event.target.closest("nav")) {
+      return;
+    }
+
+    showNextLine();
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === " " || event.key === "Enter" || event.key === "ArrowDown") {
+      event.preventDefault();
+      showNextLine();
+    }
+  });
 </script>
 
 </body>
