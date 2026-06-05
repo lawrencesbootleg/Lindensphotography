@@ -4,127 +4,113 @@
 <head>
   <title>Woy Woy | Linden Li</title>
 
-<style>
-  body {
-    background: #111;
-    color: white;
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-  }
-
-  nav {
-    text-align: center;
-    margin: 18px 0 30px 0;
-    font-family: Arial, sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  nav a {
-    color: #aaa;
-    text-decoration: none;
-    margin: 0 14px;
-  }
-
-  nav a:hover {
-    color: white;
-  }
-
-  h1 {
-    text-align: center;
-    font-weight: normal;
-    font-size: 2.2rem;
-    margin: 45px 0 60px 0;
-    letter-spacing: 0.04em;
-  }
-
-.gallery {
-  max-width: 1200px;
-  margin: 0 auto 90px auto;
-  padding: 0 20px;
-  columns: 3;
-  column-gap: 18px;
-}
-
-.gallery a {
-  display: block;
-  margin-bottom: 18px;
-  break-inside: avoid;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: opacity 0.25s ease;
-}
-
-.gallery img:hover {
-  opacity: 0.82;
-}
-
-@media (max-width: 800px) {
-  .gallery {
-    columns: 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery {
-    columns: 1;
-    padding: 0 14px;
-  }
-}
-  /* LIGHTBOX */
-
-  .lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .lightbox img {
-    max-width: 92vw;
-    max-height: 92vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-  }
-
-  @media (max-width: 800px) {
-    .gallery {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+  <style>
+    body {
+      background: #111;
+      color: white;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
     }
-  }
 
-  @media (max-width: 600px) {
     nav {
-      font-size: 0.72rem;
+      text-align: center;
+      margin: 18px 0 30px 0;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     nav a {
-      margin: 0 7px;
+      color: #aaa;
+      text-decoration: none;
+      margin: 0 14px;
+    }
+
+    nav a:hover {
+      color: white;
     }
 
     h1 {
-      font-size: 1.8rem;
-      margin: 34px 0 42px 0;
+      text-align: center;
+      font-weight: normal;
+      font-size: 2.2rem;
+      margin: 45px 0 60px 0;
+      letter-spacing: 0.04em;
     }
 
     .gallery {
-      padding: 0 14px;
-      gap: 12px;
+      max-width: 1200px;
+      margin: 0 auto 90px auto;
+      padding: 0 20px;
+      columns: 3;
+      column-gap: 18px;
     }
-  }
-</style>
-  
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 18px;
+      break-inside: avoid;
+      cursor: pointer;
+      transition: opacity 0.25s ease;
+    }
+
+    .gallery img:hover {
+      opacity: 0.82;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .lightbox img {
+      max-width: 92vw;
+      max-height: 92vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    @media (max-width: 800px) {
+      .gallery {
+        columns: 2;
+        column-gap: 14px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        font-size: 0.72rem;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin: 34px 0 42px 0;
+      }
+
+      .gallery {
+        columns: 1;
+        padding: 0 14px;
+      }
+
+      .gallery img {
+        margin-bottom: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body>
